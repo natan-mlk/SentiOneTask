@@ -1,18 +1,56 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:100,400");
-.header-title, .header-subtitle {
-  font-family: 'Lato', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Lato:100,400,700,900");
+* {
+  font-family: "Lato", sans-serif;
+  font-size: 17px; }
+
+.center {
+  text-align: center; }
+
+.header-title {
+  margin: 200px 0 0;
   font-weight: 100;
-  font-size: 4rem;
+  font-size: 65px;
   color: white;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1.2; }
 
-.header-subtitle {
-  font-size: 2rem;
-  text-transform: none; }
+.header-subtitle, .header-subtitle-larger {
+  margin: 90px 0 40px;
+  font-weight: 100;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: white;
+  text-align: center; }
+
+.header-subtitle-larger {
+  font-size: 24px;
+  margin: 0 auto 15px; }
 
 .headd {
   background: url(../img/header-photo.jpg) no-repeat center;
   background-size: cover; }
+
+form {
+  max-width: 330px;
+  margin: auto; }
+
+.input-transparent {
+  height: 45px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 100;
+  background-color: transparent; }
+
+.accent-btn {
+  width: 100%;
+  margin-top: 10px;
+  height: 45px;
+  border: none;
+  font-weight: 100;
+  background-color: #1a88ef;
+  font-size: 23px;
+  color: white; }
 
 /*# sourceMappingURL=styles.css.map */
