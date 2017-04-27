@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:100,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,200,400,700,900");
 * {
   font-family: "Lato", sans-serif;
-  font-size: 17px; }
+  font-weight: 400;
+  font-size: 16.5px;
+  color: #4b4b4b; }
 
 .center {
   text-align: center; }
@@ -52,5 +54,30 @@ form {
   background-color: #1a88ef;
   font-size: 23px;
   color: white; }
+
+.smart {
+  background-color: #1e1e1e;
+  height: 163px;
+  margin-top: 262px; }
+
+.smartphone {
+  margin-top: -105px; }
+
+.smart-title, .tick-title {
+  font-weight: 100;
+  font-size: 50px;
+  letter-spacing: 1px;
+  color: white;
+  text-align: center; }
+
+.smart-description {
+  padding: 10px 0 10px;
+  text-indent: 3rem;
+  line-height: 3rem; }
+
+.tick-title {
+  color: #4b4b4b;
+  text-align: center;
+  font-weight: 200; }
 
 /*# sourceMappingURL=styles.css.map */

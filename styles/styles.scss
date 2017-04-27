@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:100,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,200,400,700,900');
 
 $font-prime : 'Lato', sans-serif;
 $accent-color: #1a88ef;
+$font-color-basic: #4b4b4b;
 
 * {
   font-family: $font-prime;
-  font-size: 17px;
+  font-weight: 400;
+  font-size: 16.5px;
+  color: $font-color-basic;
 }
 
 // GENERAL
@@ -71,5 +74,39 @@ form {
   background-color: $accent-color;
   font-size: 23px;
   color: white;
+}
 
+// SMART
+
+.smart {
+  background-color: #1e1e1e;
+  height: 163px;
+  margin-top: 262px;
+}
+
+.smartphone {
+  margin-top: -105px;
+}
+
+.smart-title {
+  font-weight: 100;
+  font-size: 50px;
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+}
+
+.smart-description {
+  padding: 10px 0 10px;
+  text-indent: 3rem;
+  line-height: 3rem
+}
+
+// TICK
+
+.tick-title {
+  @extend .smart-title;
+  color: $font-color-basic;
+  text-align: center;
+  font-weight: 200;
 }
