@@ -80,6 +80,9 @@ form {
   -ms-transform: translateY(2px);
   -webkit-transform: translateY(2px); }
 
+.hide-me {
+  display: none; }
+
 .input-error {
   border: 2px solid #900e0e;
   opacity: 0.8; }
