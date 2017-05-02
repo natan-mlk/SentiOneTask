@@ -1,17 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,200,400,700,900");
 * {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16.5px;
+  font-weight: 200;
+  font-size: 14px;
   color: #4b4b4b; }
 
 .center {
   text-align: center; }
 
+.title-on-white {
+  font-weight: 200;
+  font-size: 45px;
+  color: #606060; }
+
+.title-on-dark {
+  font-weight: 200;
+  font-size: 45px;
+  color: white; }
+
+nav {
+  position: fixed; }
+
 .header-title {
   margin: 200px 0 0;
   font-weight: 100;
-  font-size: 65px;
+  font-size: 54px;
   color: white;
   text-align: center;
   text-transform: uppercase;
@@ -20,13 +33,13 @@
 .header-subtitle, .header-subtitle-larger {
   margin: 90px 0 40px;
   font-weight: 100;
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: 1px;
   color: white;
   text-align: center; }
 
 .header-subtitle-larger {
-  font-size: 24px;
+  font-size: 23px;
   margin: 0 auto 15px; }
 
 .headd {
@@ -41,7 +54,7 @@ form {
   height: 45px;
   width: 100%;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 100;
   background-color: transparent; }
 
@@ -52,32 +65,59 @@ form {
   border: none;
   font-weight: 100;
   background-color: #1a88ef;
-  font-size: 23px;
+  font-size: 21px;
   color: white; }
+
+#joinus button {
+  max-width: 330px; }
+
+#assets button {
+  max-width: 175px;
+  background-color: transparent; }
+
+#smart {
+  margin-top: 262px; }
 
 .smart {
   background-color: #1e1e1e;
-  height: 163px;
-  margin-top: 262px; }
+  padding: 25px 0 25px; }
 
 .smartphone {
-  margin-top: -105px; }
+  margin-top: -210px; }
 
-.smart-title, .tick-title {
-  font-weight: 100;
-  font-size: 50px;
-  letter-spacing: 1px;
-  color: white;
+.description {
+  padding: 20px 0 0;
+  line-height: 3rem;
+  color: #606060; }
+
+#tick {
+  margin-top: 180px; }
+
+.centered {
   text-align: center; }
 
-.smart-description {
-  padding: 10px 0 10px;
-  text-indent: 3rem;
-  line-height: 3rem; }
+.different {
+  background-color: #1e1e1e; }
 
-.tick-title {
-  color: #4b4b4b;
-  text-align: center;
-  font-weight: 200; }
+.squares {
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  position: relative; }
+
+footer {
+  background-color: #2a394f; }
+  footer p {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  ul li {
+    color: #6788b7; }
 
 /*# sourceMappingURL=styles.css.map */
