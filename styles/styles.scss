@@ -5,6 +5,13 @@ $font-color-basic: #4b4b4b;
 $accent-color: #1a88ef;
 $back-dark: #1e1e1e;
 
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
 
 * {
   font-family: $font-prime;
@@ -35,6 +42,11 @@ $back-dark: #1e1e1e;
 
 nav {
   position: fixed;
+  @include transition(500ms ease);
+}
+
+.nav-background {
+  background-color: #1a88ef;
 }
 
 // HEADER
@@ -159,6 +171,7 @@ footer {
    p {
     color: white;
     text-transform: uppercase;
+     font-size: 10.5px;
      font-weight: 400;
      letter-spacing: 1px;
   }
@@ -168,5 +181,8 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  li {color: #6788b7}
+  li {
+    font-size: 10px;
+    color: #6788b7
+  }
 }
