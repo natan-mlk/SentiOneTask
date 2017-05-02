@@ -13,6 +13,12 @@ $back-dark: #1e1e1e;
   transition: $args;
 }
 
+@mixin translate($args...) {
+  transform: translateY($args);
+  -ms-transform: translateY($args);
+  -webkit-transform: translateY($args);
+}
+
 * {
   font-family: $font-prime;
   font-weight: 200;
@@ -42,7 +48,9 @@ $back-dark: #1e1e1e;
 
 nav {
   position: fixed;
+  width: 100%;
   @include transition(500ms ease);
+  z-index: 10;
 }
 
 .nav-background {
@@ -95,6 +103,22 @@ form {
   font-size: 16px;
   font-weight: 100;
   background-color: transparent;
+}
+
+.mail-error {
+  background-color: #900e0e;
+  opacity: 0.8;
+  border-radius: 3px;
+  padding: 5px 0;
+  color: white;
+  font-size: 12px;
+  font-weight: 200;
+  @include translate(2px);
+}
+
+.input-error {
+  border: 2px solid #900e0e;
+  opacity: 0.8;
 }
 
 .accent-btn {
@@ -183,6 +207,7 @@ ul {
   padding: 0;
   li {
     font-size: 10px;
+    font-weight: 400;
     color: #6788b7
   }
 }

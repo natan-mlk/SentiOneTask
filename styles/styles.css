@@ -20,11 +20,13 @@
 
 nav {
   position: fixed;
+  width: 100%;
   -webkit-transition: 500ms ease;
   -moz-transition: 500ms ease;
   -ms-transition: 500ms ease;
   -o-transition: 500ms ease;
-  transition: 500ms ease; }
+  transition: 500ms ease;
+  z-index: 10; }
 
 .nav-background {
   background-color: #1a88ef; }
@@ -65,6 +67,22 @@ form {
   font-size: 16px;
   font-weight: 100;
   background-color: transparent; }
+
+.mail-error {
+  background-color: #900e0e;
+  opacity: 0.8;
+  border-radius: 3px;
+  padding: 5px 0;
+  color: white;
+  font-size: 12px;
+  font-weight: 200;
+  transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  -webkit-transform: translateY(2px); }
+
+.input-error {
+  border: 2px solid #900e0e;
+  opacity: 0.8; }
 
 .accent-btn {
   width: 100%;
@@ -128,6 +146,7 @@ ul {
   padding: 0; }
   ul li {
     font-size: 10px;
+    font-weight: 400;
     color: #6788b7; }
 
 /*# sourceMappingURL=styles.css.map */
