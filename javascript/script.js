@@ -11,21 +11,28 @@ $(window).on('scroll', function () {
 
 //Form validation
 
+
+
+
 $('.sign-up').submit(function (event) {
   event.preventDefault();
   var $email = $('input[name="email"]').val();
-  //console.log($email)
+  console.log(validate($email))
 
-  if (validate($email) === false) {
+
+
+/*  if (!validate($email)) {
     $('.form-control').addClass('input-error');
-    $('.mail-error').fadeOut();
-  }
+    $('.mail-error').removeClass('hide-me');
+  }*/
 });
+
 
 function validate(email) {
   var pattern = /^\S+@\S+[\.][0-9a-z]+$/;
   return pattern.test(email);
 }
+
 
 /*
 

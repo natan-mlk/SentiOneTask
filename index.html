@@ -36,14 +36,14 @@
               action=""
               method="post">
           <div class="form-group">
-            <div class="mail-error">
+            <div class="mail-error hide-me">
               this is not a valid email address
             </div>
-              <input type="email"
-                     class="form-control input-transparent"
-                     id="exampleInputEmail1"
-                     placeholder="enter your email">
-              <button type="submit" class="btn btn-default accent-btn">sign up now</button>
+            <input type="email"
+                   class="form-control input-transparent"
+                   id="exampleInputEmail1"
+                   placeholder="enter your email">
+            <button type="submit" class="btn btn-default accent-btn">sign up now</button>
 
           </div>
         </form>
@@ -108,7 +108,7 @@
     <div class="row">
       <p class="title-on-dark center">A little bit different</p>
       <div class="col-xs-12 col-md-6 col-md-offset-3">
-        <p class="description centered">
+        <p class="description-on-dark centered ">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
           totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
           explicabo.
@@ -131,7 +131,7 @@
         <p class="title-on-white">
           Your most valuable asset
         </p>
-        <p>
+        <p class="description">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
           totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
           vitae dicta sunt explicabo.
@@ -144,13 +144,16 @@
 
 <section id="joinus" class="center">
   <p class="title-on-white center">Join us now</p>
-  <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <p class="description centered">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo.
-      </p>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <p class="description centered">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+          totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+          explicabo.
+        </p>
+      </div>
     </div>
   </div>
   <button type="submit" class="btn btn-default accent-btn">start your 14 day trial</button>
@@ -158,56 +161,68 @@
 
 <footer>
   <div class="container">
-    <div class="col-xs-6 col-md-1 col-md-offset-1">
-      <p>Produkty</p>
-      <ul>
-        <li>Sentione</li>
-        <li>Saleslift</li>
-        <li>Cennik</li>
-      </ul>
-    </div>
+    <div class="row">
+      <div class="col-xs-12 logo-footer-tablet">
+        <img src="img/sentione.png">
+      </div>
 
-    <div class="col-xs-6 col-md-1">
-      <p>Funkcje</p>
-      <ul>
-        <li>Tour</li>
-        <li>Monitorowanie</li>
-        <li>Zastosowanie</li>
-      </ul>
-    </div>
+      <div class="col-xs-12 col-md-8 col-md-offset-1 container-flex">
+        <div class="footer-contents">
+          <p>Produkty</p>
+          <ul>
+            <li>Sentione</li>
+            <li>Saleslift</li>
+            <li>Cennik</li>
+          </ul>
+        </div>
 
-    <div class="col-xs-6 col-md-1">
-      <p>Zasoby</p>
-      <ul>
-        <li>Media</li>
-        <li>Warunki korzystania</li>
-        <li>Regulamin</li>
-      </ul>
-    </div>
+        <div class="footer-contents">
+          <p>Funkcje</p>
+          <ul>
+            <li>Tour</li>
+            <li>Monitorowanie</li>
+            <li>Zastosowanie</li>
+          </ul>
+        </div>
 
-    <div class="col-xs-6 col-md-1">
-      <p>Blog</p>
-      <ul>
-        <li>Ostatnie wpisy</li>
-      </ul>
-    </div>
+        <div class="footer-contents">
+          <p>Zasoby</p>
+          <ul>
+            <li>Media</li>
+            <li>Warunki korzystania</li>
+            <li>Regulamin</li>
+          </ul>
+        </div>
 
-    <div class="col-xs-6 col-md-1">
-      <p>Kontakt</p>
-      <ul>
-        <li>Kamil Bargiel</li>
-        <li>+48 881 609 010</li>
-        <li>kamil@sentione.com</li>
-      </ul>
-    </div>
+        <div class="footer-contents">
+          <p>Blog</p>
+          <ul>
+            <li>Ostatnie wpisy</li>
+          </ul>
+        </div>
 
-    <div class="col-xs-6 col-md-1">
-      <p>Pomoc</p>
-      <ul>
-        <li>+48 726 337 141</li>
-        <li>contact@sentione.com</li>
-        <li>skype: senti.one</li>
-      </ul>
+        <div class="footer-contents">
+          <p>Kontakt</p>
+          <ul>
+            <li>Kamil Bargiel</li>
+            <li>+48 881 609 010</li>
+            <li>kamil@sentione.com</li>
+          </ul>
+        </div>
+
+        <div class="footer-contents">
+          <p>Pomoc</p>
+          <ul>
+            <li>+48 726 337 141</li>
+            <li>contact@sentione.com</li>
+            <li>skype: senti.one</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-2 logo-footer-desktop">
+        <img src="img/sentione.png">
+      </div>
     </div>
   </div>
 </footer>

@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,200,400,700,900');
 
 $font-prime : 'Lato', sans-serif;
-$font-color-basic: #4b4b4b;
+$font-color-basic: #2a394f;
 $accent-color: #1a88ef;
 $back-dark: #1e1e1e;
+$link-hover: #0e7adf;
 
 @mixin transition($args...) {
   -webkit-transition: $args;
@@ -18,6 +19,22 @@ $back-dark: #1e1e1e;
   -ms-transform: translateY($args);
   -webkit-transform: translateY($args);
 }
+
+$md-width: 768px;
+$lg-width: 992px;
+
+@mixin tablet {
+  @media (min-width: #{$md-width}) and (max-width: #{$lg-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
 
 * {
   font-family: $font-prime;
@@ -35,12 +52,21 @@ $back-dark: #1e1e1e;
 .title-on-white {
   font-weight: 200;
   font-size: 45px;
-  color: #606060;
 }
 
 .title-on-dark {
   font-weight: 200;
   font-size: 45px;
+  color: white;
+}
+
+.description {
+  padding: 20px 0 0;
+  line-height: 3rem;
+}
+
+.description-on-dark {
+  @extend .description;
   color: white;
 }
 
@@ -54,7 +80,7 @@ nav {
 }
 
 .nav-background {
-  background-color: #1a88ef;
+  background-color: #2a394f;
 }
 
 // HEADER
@@ -163,11 +189,7 @@ form {
   margin-top: -210px;
 }
 
-.description {
-  padding: 20px 0 0;
-  line-height: 3rem;
-  color: #606060;
-}
+
 
 // TICK
 #tick {
@@ -195,8 +217,10 @@ form {
 
 footer {
   background-color: #2a394f;
+  min-height: 175px;
 
    p {
+     margin-top: 22px;
     color: white;
     text-transform: uppercase;
      font-size: 10.5px;
@@ -210,8 +234,43 @@ ul {
   margin: 0;
   padding: 0;
   li {
+    line-height: 2rem;
     font-size: 10px;
     font-weight: 400;
-    color: #6788b7
+    color: #6788b7;
+
+    &:hover {
+      color: $link-hover;
+    }
+  }
+}
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo-footer-desktop {
+  display: none;
+  @include desktop {
+    display: block;
+    text-align: right;
+    margin-top: 16px;
+  }
+}
+
+.logo-footer-tablet {
+  padding: 20px 0 0 20px;
+  @include desktop {
+    display: none;
+  }
+}
+
+.footer-contents {
+  width: 120px;
+  //padding-left: 20px;
+  padding-bottom: 10px;
+  @include desktop {
+    padding-left: 0;
   }
 }
