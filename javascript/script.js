@@ -1,18 +1,15 @@
 //Navigation effect
 $(window).on('scroll', function () {
   var $scrollTop = $(window).scrollTop();
-  if ($scrollTop > $('header').height()) {
+  if ($scrollTop > ($('header').height()/5)) {
     $('.navigation').addClass("nav-background");
   }
-  if ($scrollTop < $('header').height()) {
+  if ($scrollTop < ($('header').height()/5)) {
     $('.navigation').removeClass("nav-background");
   }
 });
 
 //Form validation
-
-
-
 
 $('.sign-up').submit(function (event) {
   event.preventDefault();

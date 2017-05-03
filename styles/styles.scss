@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
 
-$font-prime : 'Lato', sans-serif;
+$font-prime: 'Lato', sans-serif;
 $font-color-basic: #2a394f;
 $accent-color: #1a88ef;
 $back-dark: #1e1e1e;
@@ -22,6 +22,7 @@ $link-hover: #0e7adf;
 
 $md-width: 768px;
 $lg-width: 992px;
+$xl-width: 1200px;
 
 @mixin tablet {
   @media (min-width: #{$md-width}) and (max-width: #{$lg-width - 1px}) {
@@ -30,11 +31,16 @@ $lg-width: 992px;
 }
 
 @mixin desktop {
-  @media (min-width: #{$lg-width}) {
+  @media (min-width: #{$lg-width}) and (max-width: #{$xl-width - 1px}) {
     @content;
   }
 }
 
+@mixin desktop-large {
+  @media (min-width: #{$xl-width}) {
+    @content;
+  }
+}
 
 * {
   font-family: $font-prime;
@@ -46,13 +52,11 @@ $lg-width: 992px;
 // GENERAL
 
 .title-on-white {
-  font-weight: 300;
-  font-size: 45px;
+  font-size: 43px;
 }
 
 .title-on-dark {
-  font-weight: 300;
-  font-size: 45px;
+  font-size: 43px;
   color: white;
 }
 
@@ -76,7 +80,52 @@ nav {
   position: fixed;
   width: 100%;
   @include transition(500ms ease);
+  padding: 15px 0 15px;
   z-index: 10;
+
+  a {
+    color: white;
+    font-weight: 400;
+    font-size: 12.5px;
+
+    &:focus {
+      color: $link-hover;
+      text-decoration: none;
+    }
+
+    /*    &:visited {
+          color: white;
+          text-decoration: none;
+        }*/
+
+    &:hover {
+      color: $link-hover;
+      text-decoration: none;
+    }
+
+    .active {
+      color: $link-hover;
+    }
+  }
+}
+
+.logo-top {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 95px;
+  }
+
+  @include desktop {
+    display: block;
+    width: 95px;
+  }
+
+  @include desktop-large {
+    display: block;
+    width: 95px;
+  }
 }
 
 .nav-background {
@@ -86,23 +135,37 @@ nav {
 // HEADER
 
 header {
+  background: url(../img/header-photo.jpg) no-repeat center;
+  background-size: cover;
   img {
     padding: 50px 0 20px;
   }
 }
 
 .header-title {
-  margin: 160px 0 0;
+  margin: 160px 10px 0;
   font-weight: 100;
-  font-size: 54px;
+  font-size: 40px;
   color: white;
   text-align: center;
   text-transform: uppercase;
   line-height: 1.2;
+
+  @include tablet {
+    font-size: 54px;
+  }
+
+  @include desktop {
+    font-size: 54px;
+  }
+
+  @include desktop-large {
+    font-size: 54px;
+  }
 }
 
 .header-subtitle {
-  margin: 65px 0 40px ;
+  margin: 65px 0 40px;
   font-weight: 100;
   font-size: 15px;
   letter-spacing: 1px;
@@ -114,14 +177,8 @@ header {
   @extend .header-subtitle;
   font-weight: 300;
   font-size: 20px;
-  margin: 0 auto 15px  ;
+  margin: 0 auto 15px;
 }
-
-.headd {
-  background: url(../img/header-photo.jpg) no-repeat center;
-  background-size: cover;
-}
-
 
 // BUTTONS AND FORMS
 
@@ -192,8 +249,23 @@ form {
 // SMART
 
 #smart {
-  margin-top: 262px;
+  margin-top: 100px;
+
+
+  @include tablet {
+    margin-top: 200px;
+  }
+
+  @include desktop {
+    margin-top: 262px;
+  }
+
+  @include desktop-large {
+    margin-top: 262px;
+  }
+
 }
+
 .smart {
   background-color: $back-dark;
   padding: 25px 0 25px;
@@ -204,41 +276,75 @@ form {
 }
 
 .smartphone {
-  margin-top: -210px;
-}
-
-
-
-// TICK
-#tick {
-  margin-top: 200px;
-
-  img {
-    margin-top: 60px;
+  display: none;
+  @include tablet {
+    display: block;
+    margin-top: -210px;
+  }
+  @include desktop {
+    display: block;
+    margin-top: -210px;
+  }
+  @include desktop-large {
+    display: block;
+    margin-top: -210px;
   }
 }
 
+// TICK
 
+#tick {
+  margin-top: 60px;
+
+  img {
+    @include translate(50%);
+  }
+}
+
+.translated {
+  @include translate(10%);
+
+  @include tablet {
+    @include translate(30%);
+  }
+
+  @include desktop {
+    @include translate(50%);
+  }
+
+  @include desktop-large {
+    @include translate(70%);
+  }
+}
 
 // BITDIFFERENT
 
-.different {
+#different {
   background-color: $back-dark;
+  padding: 50px 0 0;
 
+    @include tablet {
+      padding: 100px 0 0;
+    }
+
+    @include desktop {
+      padding: 200px 0 0;
+    }
+
+  @include desktop-large {
+    padding: 200px 0 0;
+  }
+}
+
+.different {
   img {
-  margin-top: 60px;
+    margin-top: 60px;
+    padding: 0 15px 0;
   }
 }
 
 .margined {
   margin: 110px 0 -10px;
-}
-
-.squares {
-  transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(- 50%);
-  position: relative;
 }
 
 // ASSET
@@ -249,7 +355,6 @@ form {
     margin: 50px 0 0;
   }
 }
-
 
 // JOIN US
 
@@ -268,13 +373,13 @@ footer {
     width: 85px;
   }
 
-   p {
-     margin-top: 22px;
+  p {
+    margin-top: 22px;
     color: white;
     text-transform: uppercase;
-     font-size: 10.5px;
-     font-weight: 400;
-     letter-spacing: 1px;
+    font-size: 10.5px;
+    font-weight: 400;
+    letter-spacing: 1px;
   }
 }
 
@@ -323,6 +428,12 @@ ul {
     text-align: right;
     margin-top: 16px;
   }
+
+  @include desktop-large {
+    display: block;
+    text-align: right;
+    margin-top: 16px;
+  }
 }
 
 .logo-footer-tablet {
@@ -330,13 +441,21 @@ ul {
   @include desktop {
     display: none;
   }
+
+  @include desktop-large {
+    display: none;
+  }
 }
 
 .footer-contents {
   width: 120px;
-
   padding-bottom: 10px;
+
   @include desktop {
+    padding-left: 0;
+  }
+
+  @include desktop-large {
     padding-left: 0;
   }
 }
