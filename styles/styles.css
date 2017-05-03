@@ -1,28 +1,28 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:100,200,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
 * {
   font-family: "Lato", sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 14px;
   color: #2a394f; }
 
-.center {
-  text-align: center; }
-
 .title-on-white {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 45px; }
 
 .title-on-dark {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 45px;
   color: white; }
 
 .description, .description-on-dark {
   padding: 20px 0 0;
-  line-height: 3rem; }
+  line-height: 2.5rem; }
 
 .description-on-dark {
   color: white; }
+
+.centered {
+  text-align: center; }
 
 nav {
   position: fixed;
@@ -37,8 +37,11 @@ nav {
 .nav-background {
   background-color: #2a394f; }
 
+header img {
+  padding: 50px 0 20px; }
+
 .header-title {
-  margin: 200px 0 0;
+  margin: 160px 0 0;
   font-weight: 100;
   font-size: 54px;
   color: white;
@@ -47,7 +50,7 @@ nav {
   line-height: 1.2; }
 
 .header-subtitle, .header-subtitle-larger {
-  margin: 90px 0 40px;
+  margin: 65px 0 40px;
   font-weight: 100;
   font-size: 15px;
   letter-spacing: 1px;
@@ -55,7 +58,8 @@ nav {
   text-align: center; }
 
 .header-subtitle-larger {
-  font-size: 23px;
+  font-weight: 300;
+  font-size: 20px;
   margin: 0 auto 15px; }
 
 .headd {
@@ -63,15 +67,17 @@ nav {
   background-size: cover; }
 
 form {
-  max-width: 330px;
+  max-width: 280px;
   margin: auto; }
 
+.form-control {
+  color: white; }
+
 .input-transparent {
-  height: 45px;
+  height: 40px;
   width: 100%;
   margin: 0 auto;
-  font-size: 16px;
-  font-weight: 100;
+  font-size: 15px;
   background-color: transparent; }
 
 .mail-error {
@@ -81,7 +87,6 @@ form {
   padding: 5px 0;
   color: white;
   font-size: 12px;
-  font-weight: 200;
   transform: translateY(2px);
   -ms-transform: translateY(2px);
   -webkit-transform: translateY(2px); }
@@ -96,19 +101,22 @@ form {
 .accent-btn {
   width: 100%;
   margin-top: 10px;
-  height: 45px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border: none;
-  font-weight: 100;
+  font-weight: 300;
   background-color: #1a88ef;
-  font-size: 21px;
+  font-size: 19px;
   color: white; }
 
 #joinus button {
-  max-width: 330px; }
+  max-width: 280px; }
 
 #assets button {
   max-width: 175px;
-  background-color: transparent; }
+  background-color: transparent;
+  border: 2px solid #1a88ef;
+  color: #1a88ef; }
 
 #smart {
   margin-top: 262px; }
@@ -117,17 +125,24 @@ form {
   background-color: #1e1e1e;
   padding: 25px 0 25px; }
 
+.indented {
+  text-indent: 2rem; }
+
 .smartphone {
   margin-top: -210px; }
 
 #tick {
-  margin-top: 180px; }
-
-.centered {
-  text-align: center; }
+  margin-top: 200px; }
+  #tick img {
+    margin-top: 60px; }
 
 .different {
   background-color: #1e1e1e; }
+  .different img {
+    margin-top: 60px; }
+
+.margined {
+  margin: 110px 0 -10px; }
 
 .squares {
   transform: translateY(-50%);
@@ -135,9 +150,18 @@ form {
   -webkit-transform: translateY(-50%);
   position: relative; }
 
+#assets {
+  margin: 110px 0 0; }
+  #assets p.title-on-white {
+    margin: 50px 0 0; }
+
+#joinus {
+  margin: 110px 0 0; }
+
 footer {
   background-color: #2a394f;
-  min-height: 175px; }
+  min-height: 175px;
+  margin: 120px 0 0; }
   footer img {
     width: 85px; }
   footer p {

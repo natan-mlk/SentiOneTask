@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:100,200,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
 
 $font-prime : 'Lato', sans-serif;
 $font-color-basic: #2a394f;
@@ -38,36 +38,36 @@ $lg-width: 992px;
 
 * {
   font-family: $font-prime;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 14px;
   color: $font-color-basic;
 }
 
 // GENERAL
 
-.center {
-  text-align: center;
-}
-
 .title-on-white {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 45px;
 }
 
 .title-on-dark {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 45px;
   color: white;
 }
 
 .description {
   padding: 20px 0 0;
-  line-height: 3rem;
+  line-height: 2.5rem;
 }
 
 .description-on-dark {
   @extend .description;
   color: white;
+}
+
+.centered {
+  text-align: center;
 }
 
 // NAV
@@ -85,8 +85,14 @@ nav {
 
 // HEADER
 
+header {
+  img {
+    padding: 50px 0 20px;
+  }
+}
+
 .header-title {
-  margin: 200px 0 0;
+  margin: 160px 0 0;
   font-weight: 100;
   font-size: 54px;
   color: white;
@@ -96,7 +102,7 @@ nav {
 }
 
 .header-subtitle {
-  margin: 90px 0 40px ;
+  margin: 65px 0 40px ;
   font-weight: 100;
   font-size: 15px;
   letter-spacing: 1px;
@@ -106,7 +112,8 @@ nav {
 
 .header-subtitle-larger {
   @extend .header-subtitle;
-  font-size: 23px;
+  font-weight: 300;
+  font-size: 20px;
   margin: 0 auto 15px  ;
 }
 
@@ -115,19 +122,24 @@ nav {
   background-size: cover;
 }
 
+
 // BUTTONS AND FORMS
 
 form {
-  max-width: 330px;
+  max-width: 280px;
   margin: auto;
 }
 
+.form-control {
+  color: white;
+}
+
 .input-transparent {
-  height: 45px;
+  height: 40px;
+
   width: 100%;
   margin: 0 auto;
-  font-size: 16px;
-  font-weight: 100;
+  font-size: 15px;
   background-color: transparent;
 }
 
@@ -138,7 +150,6 @@ form {
   padding: 5px 0;
   color: white;
   font-size: 12px;
-  font-weight: 200;
   @include translate(2px);
 }
 
@@ -154,17 +165,18 @@ form {
 .accent-btn {
   width: 100%;
   margin-top: 10px;
-  height: 45px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border: none;
-  font-weight: 100;
+  font-weight: 300;
   background-color: $accent-color;
-  font-size: 21px;
+  font-size: 19px;
   color: white;
 }
 
 #joinus {
   button {
-    max-width: 330px;
+    max-width: 280px;
   }
 }
 
@@ -172,6 +184,8 @@ form {
   button {
     max-width: 175px;
     background-color: transparent;
+    border: 2px solid $accent-color;
+    color: $accent-color;
   }
 }
 
@@ -185,6 +199,10 @@ form {
   padding: 25px 0 25px;
 }
 
+.indented {
+  text-indent: 2rem
+}
+
 .smartphone {
   margin-top: -210px;
 }
@@ -193,17 +211,27 @@ form {
 
 // TICK
 #tick {
-  margin-top: 180px;
+  margin-top: 200px;
+
+  img {
+    margin-top: 60px;
+  }
 }
 
-.centered {
-  text-align: center;
-}
+
 
 // BITDIFFERENT
 
 .different {
   background-color: $back-dark;
+
+  img {
+  margin-top: 60px;
+  }
+}
+
+.margined {
+  margin: 110px 0 -10px;
 }
 
 .squares {
@@ -213,11 +241,28 @@ form {
   position: relative;
 }
 
+// ASSET
+
+#assets {
+  margin: 110px 0 0;
+  p.title-on-white {
+    margin: 50px 0 0;
+  }
+}
+
+
+// JOIN US
+
+#joinus {
+  margin: 110px 0 0;
+}
+
 // FOOTER
 
 footer {
   background-color: #2a394f;
   min-height: 175px;
+  margin: 120px 0 0;
 
   img {
     width: 85px;
