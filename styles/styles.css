@@ -55,9 +55,6 @@ nav {
     nav a:focus {
       color: #0e7adf;
       text-decoration: none; }
-    nav a:hover {
-      color: #0e7adf;
-      text-decoration: none; }
     nav a.active {
       color: #0e7adf; }
       nav a.active::before {
@@ -69,6 +66,19 @@ nav {
         text-align: center;
         width: 100%;
         font-size: 30px; }
+    nav a:hover {
+      text-decoration: none;
+      color: white; }
+      nav a:hover::before {
+        content: '.';
+        display: inline-block;
+        position: absolute;
+        bottom: -0.4em;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        font-size: 30px;
+        color: #0e7adf; }
 
 .logo-top {
   display: none; }

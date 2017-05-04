@@ -4,7 +4,7 @@ $font-prime: 'Lato', sans-serif;
 $font-color-basic: #2a394f;
 $accent-color: #1a88ef;
 $back-dark: #1e1e1e;
-$link-hover: #0e7adf;
+$link-active: #0e7adf;
 
 @mixin transition($args...) {
   -webkit-transition: $args;
@@ -99,17 +99,12 @@ nav {
     @include transition(300ms);
 
     &:focus {
-      color: $link-hover;
-      text-decoration: none;
-    }
-
-    &:hover {
-      color: $link-hover;
+      color: $link-active;
       text-decoration: none;
     }
 
     &.active {
-      color: $link-hover;
+      color: $link-active;
       &::before {
         content: '.';
         display: inline-block;
@@ -119,6 +114,22 @@ nav {
         text-align: center;
         width: 100%;
         font-size: 30px;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: white;
+      &::before {
+        content: '.';
+        display: inline-block;
+        position: absolute;
+        bottom: -0.4em;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        font-size: 30px;
+        color: $link-active;
       }
     }
   }
@@ -444,7 +455,7 @@ ul {
       @include transition(300ms);
 
       &:focus {
-        color: $link-hover;
+        color: $link-active;
         text-decoration: none;
       }
 
@@ -454,7 +465,7 @@ ul {
       }
 
       &:hover {
-        color: $link-hover;
+        color: $link-active;
         text-decoration: none;
       }
     }
