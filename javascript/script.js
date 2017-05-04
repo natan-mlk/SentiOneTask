@@ -9,6 +9,7 @@ $(window).on('scroll', function () {
   }
 });
 
+//Fade in effect
 
 $(window).on('scroll', function () {
 
@@ -30,33 +31,26 @@ $(window).on('scroll', function () {
   }
 });
 
-
-
 //Form validation
 
 $('.sign-up').submit(function (event) {
   event.preventDefault();
   var $email = $('input[name="email"]').val();
-  console.log(validate($email))
 
+  console.log(validate($email)); //ciągle podaje false, dlaczego?
 
-
-/*  if (!validate($email)) {
+  if (!validate($email)) {
     $('.form-control').addClass('input-error');
     $('.mail-error').removeClass('hide-me');
-  }*/
+  }
 });
 
-
 function validate(email) {
-  var pattern = /^\S+@\S+[\.][0-9a-z]+$/;
+  var pattern = /^\S+@\S+[\.][0-9a-z]+$/; //zły reg?
   return pattern.test(email);
 }
 
-
-/*
-
 $('input[name="email"]').focusin(function () {
-  $('.mail-error').fadeOut();
+  $('.mail-error').addClass('hide-me');
   $('.form-control').removeClass('input-error');
-});*/
+});

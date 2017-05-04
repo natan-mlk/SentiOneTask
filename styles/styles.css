@@ -137,7 +137,10 @@ header {
 
 form {
   max-width: 280px;
-  margin: auto; }
+  margin: auto;
+  transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -webkit-transform: translateY(-20px); }
 
 .form-control {
   color: white; }
@@ -161,7 +164,7 @@ form {
   -webkit-transform: translateY(2px); }
 
 .hide-me {
-  display: none; }
+  visibility: hidden; }
 
 .input-error {
   border: 2px solid #900e0e;
