@@ -22,6 +22,17 @@
 .centered {
   text-align: center; }
 
+.appear-1, .appear-2 {
+  opacity: 0;
+  -webkit-transition: 1200ms ease;
+  -moz-transition: 1200ms ease;
+  -ms-transition: 1200ms ease;
+  -o-transition: 1200ms ease;
+  transition: 1200ms ease; }
+
+.make-visible {
+  opacity: 1; }
+
 nav {
   position: fixed;
   width: 100%;
@@ -36,18 +47,28 @@ nav {
     color: white;
     font-weight: 400;
     font-size: 12.5px;
-    /*    &:visited {
-          color: white;
-          text-decoration: none;
-        }*/ }
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms; }
     nav a:focus {
       color: #0e7adf;
       text-decoration: none; }
     nav a:hover {
       color: #0e7adf;
       text-decoration: none; }
-    nav a .active {
+    nav a.active {
       color: #0e7adf; }
+      nav a.active::before {
+        content: '.';
+        display: inline-block;
+        position: absolute;
+        bottom: -0.4em;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        font-size: 30px; }
 
 .logo-top {
   display: none; }
@@ -145,7 +166,12 @@ form {
   font-weight: 300;
   background-color: #1a88ef;
   font-size: 19px;
-  color: white; }
+  color: white;
+  -webkit-transition: 400ms;
+  -moz-transition: 400ms;
+  -ms-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms; }
 
 #joinus button {
   max-width: 280px; }
@@ -154,7 +180,15 @@ form {
   max-width: 175px;
   background-color: transparent;
   border: 2px solid #1a88ef;
-  color: #1a88ef; }
+  color: #1a88ef;
+  -webkit-transition: 400ms;
+  -moz-transition: 400ms;
+  -ms-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms; }
+  #assets button:hover {
+    background-color: #1a88ef;
+    color: white; }
 
 #smart {
   margin-top: 100px; }
@@ -168,8 +202,25 @@ form {
     #smart {
       margin-top: 262px; } }
 
-.smart {
+.horizontal-strip {
+  height: 183px;
   background-color: #1e1e1e;
+  width: 100%;
+  position: absolute; }
+  @media only screen and (min-width: 543px) {
+    .horizontal-strip {
+      height: 120px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .horizontal-strip {
+      height: 183px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .horizontal-strip {
+      height: 183px; } }
+  @media (min-width: 1200px) {
+    .horizontal-strip {
+      height: 120px; } }
+
+.smart {
   padding: 25px 0 25px; }
 
 .indented {
@@ -271,7 +322,12 @@ ul {
     ul li a {
       color: #6788b7;
       font-weight: 400;
-      font-size: 10px; }
+      font-size: 10px;
+      -webkit-transition: 300ms;
+      -moz-transition: 300ms;
+      -ms-transition: 300ms;
+      -o-transition: 300ms;
+      transition: 300ms; }
       ul li a:focus {
         color: #0e7adf;
         text-decoration: none; }

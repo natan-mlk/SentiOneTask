@@ -9,6 +9,29 @@ $(window).on('scroll', function () {
   }
 });
 
+
+$(window).on('scroll', function () {
+
+  var p = $('.appear-1');
+  var offset = p.offset().top;
+  var scrollTop = $(window).scrollTop()
+  if (scrollTop > (offset - window.outerHeight + 200)) {
+    $( '.appear-1' ).addClass("make-visible");
+  }
+});
+
+$(window).on('scroll', function () {
+
+  var p = $('.appear-2');
+  var offset = p.offset().top;
+  var scrollTop = $(window).scrollTop()
+  if (scrollTop > (offset - window.outerHeight + 200)) {
+    $( '.appear-2' ).addClass("make-visible");
+  }
+});
+
+
+
 //Form validation
 
 $('.sign-up').submit(function (event) {
